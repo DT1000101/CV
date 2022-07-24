@@ -1,6 +1,9 @@
 name: Compile Latex and Release PDF
 
-on: [push]
+on:
+  push:
+    tags:
+      - "*.*.*"
 
 jobs:
   build_latex:

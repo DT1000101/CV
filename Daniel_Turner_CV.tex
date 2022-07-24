@@ -1,0 +1,107 @@
+%%%%%%%%%%%%%%%
+% based on CV template made by LianTze Lim (liantze@gmail.com)
+
+\documentclass[a4paper,skipsamekey,11pt,english]{curve}
+
+\usepackage{settings}
+
+% Change the fonts if you want
+\ifxetexorluatex % If you're using XeLaTeX or LuaLaTeX
+  \usepackage{fontspec} 
+  \usepackage[p,osf,swashQ]{cochineal}
+  \usepackage[medium,bold]{cabin}
+  \usepackage[varqu,varl,scale=0.9]{zi4}
+\else % If you're using pdfLaTeX or latex
+  \usepackage[T1]{fontenc}
+  \usepackage[p,osf,swashQ]{cochineal}
+  \usepackage{cabin}
+  \usepackage[varqu,varl,scale=0.9]{zi4}
+% \fi
+\usepackage{wasysym}
+\usepackage[absolute,overlay]{textpos}
+
+\usepackage{wasysym}
+\usepackage[absolute,overlay]{textpos}
+
+
+
+\addbibresource{own-bib.bib}
+
+%% Specify your last name and first name (as given in the .bib) to automatically bold your own name in the publications list. One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly for now...
+\myname{Turner}{Daniel}
+
+% Change the page margins if you want
+% \geometry{left=1cm,right=1cm,top=1.5cm,bottom=1.5cm}
+
+% Change the colours if you want
+\definecolor{SwishLineColour}{HTML}{3287D4}
+\definecolor{MarkerColour}{HTML}{3287D4}
+
+% Change the item prefix marker if you want
+\prefixmarker{\relscale{.75}\faJedi}
+
+%% Photo is only shown if "fullonly" is included
+\includecomment{fullonly}
+% \excludecomment{fullonly}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\leftheader{%
+  {\LARGE\bfseries\sffamily Daniel Turner}
+  \\
+  \\
+  \makefield{\faEnvelope[regular]}{\href{mailto://dt1000101@gmail.com}{\texttt{dt1000101@gmail.com}}}
+  \makefield{\faGithub}{\href{https://github.com/DT1000101}{\texttt{DT1000101}}}
+  \makefield{\phone}{\texttt{+351~912583201}}
+  \\
+  \\
+  \makefield{\faGlobeAfrica}{\texttt{English/Portuguese}}
+  \makefield{~~~~\faLanguage}{~~\texttt{EN/PT}}
+  \makefield{~~~~~~~~~~~~~~~~\faBirthdayCake}{~~~~~~~\texttt{1995}}
+  % \makefield{\faGlobe}{\url{http://example.example.org/}}
+  % \makefield{\faLinkedin}
+  % {\url{http://www.linkedin.com/in/example/}}
+}
+
+\rightheader{~}
+\begin{fullonly}
+\photo[r]{photo}
+\photoscale{0.175}
+\end{fullonly}
+
+\hyphenpenalty=1000
+
+\title{Curriculum Vitae}
+
+\begin{document}
+
+
+\begin{textblock*}{14cm}(2.25cm,0.65cm) % {block width} (coords)
+  \href{https://github.com/DT1000101}{
+    \scriptsize Ver. \today \\
+    \scriptsize Click here for the latest version.
+  }
+\end{textblock*}
+
+\makeheaders[c]
+
+\makerubric{employment}
+\makerubric{education}
+
+\pagebreak
+
+\input{publications}
+
+\makerubric{fundedResearch}
+\makerubric{conferences}
+
+\pagebreak
+
+\makerubric{skills}
+
+% \makerubric{misc}
+
+
+\end{document}
